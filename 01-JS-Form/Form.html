@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get User Input</title>
+    <title>JavaScript Form validation</title>
 
+    <!-- CSS Link -->
     <link rel="stylesheet" href="./Form.css">
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-        <form action="#">
-            <input type="text" placeholder="Enter Name" value="" id="userInput">
-            <input type="password" placeholder="Enter password" value="" id="userPassword">
-            <button type="button" onclick="getInput()">Click</button>
+        <form action="" class="reg-form-cont">
+            <div class="reg-form-top">
+                <h1>REGISTRATION FORM</h1>
+            </div>
+
+            <div class="reg-form-body">
+
+                <div class="reg-input-cont">
+                    <label for="">Username</label>
+                    <input type="text" placeholder="Enter your full name">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Username is Incorrect.</small>
+                </div>
+
+                <div class="reg-input-cont">
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Enter your email">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Email is Incorrect.</small>
+                </div>
+
+                <div class="reg-input-cont">
+                    <label for="">Phone Number</label>
+                    <input type="number" placeholder="Enter your Phone Number">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Phone number is not Valid.</small>
+                </div>
+
+                <div class="reg-input-cont">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter your password ">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Enter your Password.</small>
+                </div>
+
+                <div class="reg-input-cont">
+                    <label for="">Confirm Password</label>
+                    <input type="text" placeholder="Enter your Password again">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Please enter Password Again.</small>
+                </div>
+            </div>
+            <div class="form-sbmt-btn">
+                <input type="submit" value="Submit">
+            </div>
         </form>
 
 
