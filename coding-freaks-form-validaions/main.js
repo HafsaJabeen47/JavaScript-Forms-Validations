@@ -1,20 +1,17 @@
-let submitBtn =document.querySelector('#submit-btn');
+let submit = document.querySelector('#submit');
 
-function isEmpty(holder){
-    // return holder.children[0].value === '' ? true : false; aj kal lkhny ka ye style popular HTMLDetailsElement. short hai. nechy jo if else ka use kia hai if else or is tran likhny ka style same output deta hai.
-    if(holder.children[0].value === ''){ //holder k bad b children ko access kr skty hen.
-        let fName = document.querySelector('#Fname');
-        fName.style.border = '1px solid red';
-        return true
-    }else{
-        let fName = document.querySelector('#Fname');
-        fName.style.border = '1px solid green';
-        return false
-    }
+let isEmpty = (holder)=>{
+   return holder.children[1].value === '' ? true : false
+//    ye opr wali line if/else ka shorform hai.
+    // if(holder.children[1].value === ''){
+    //     return true
+    // }else{
+    //     return false
+    // }  Note: if else ye wali approach bohat old ho chuki hai is ki bjay hum aik hi line me if else ko define kren gen question mark and colon se. ? :
 }
+submit.addEventListener('click', (event)=>{
+    event.preventDefault();
+    let username = document.querySelector('#username');
+    console.log(isEmpty(username));
 
-submitBtn.addEventListener('click', ()=>{
-    let contactForm = document.querySelector('#contact-form');
-    // isEmpty(contactForm.children[0].value); // .children[0].value isko hum holder k sath b likh skty hen.
-    isEmpty(contactForm);
 });
