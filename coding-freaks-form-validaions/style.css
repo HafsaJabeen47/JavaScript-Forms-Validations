@@ -120,7 +120,7 @@
 #textarea:focus{
     outline: 1px solid grey;
 }
-#contact-form-btn{
+#submit-btn{
     background: linear-gradient(to left, #fdbc4d, #268184 );
     font-family: var(--body-font);
     color: var(--white-color);
