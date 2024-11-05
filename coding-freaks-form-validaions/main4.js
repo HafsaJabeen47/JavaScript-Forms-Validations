@@ -1,17 +1,21 @@
-let submit = document.querySelector('#submit');
+// get ids
+let userinput = document.getElementById("userinput");
+let emailinput = document.getElementById("emailinput");
+let passinput = document.getElementById("passinput");
+let confinput = document.getElementById("confinput");
 
-let formValidation = ()=>{
-    let username = document.querySelector('#username');
-    let email = document.querySelector('#email');
-    let password = document.querySelector('#password');
-    let confirm = document.querySelector('#confirm');
+// error ids
+let usererror = document.getElementById("usererror");
+let emailerror = document.getElementById("emailerror");
+let passerror = document.getElementById("passerror");
+let conferror = document.getElementById("conferror");
 
-
-    if()
+function data(){
+    if (userinput.value == ""){
+        usererror.innerHTML = "*Number is required";
+        usererror.classList.add('error')
+    }
+    else{
+        usererror.innerHTML = "";
+    }
 }
-
-
-
-submit.addEventListener('click', ()=>{
-
-});

@@ -33,13 +33,16 @@ let passwordFun = ()=>{
 }
 
 // confirm
-let confirmFun = ()=>{
+let confirmFun = (len = 3)=>{
     let confirm = document.querySelector('#confirm');
 
-    if(confirm.children[1].value === '' || confirm.children[1].value.length <= ){
+    if(confirm.children[1].value === '' || confirm.children[1].value.length >= len ){
         confirm.classList.add('error');
         confirm.children[4].innerHTML = 'Please Enter Same Password';
         confirm.classList.remove('success')
+    }else if(password!=confirm){
+        return false
+
     }else{
         confirm.classList.add('success')
         confirm.classList.remove('error')
