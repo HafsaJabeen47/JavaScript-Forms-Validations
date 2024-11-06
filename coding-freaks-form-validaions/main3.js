@@ -1,4 +1,4 @@
-// Form Validation By Programming Guruji
+// Form Validation By Programming Guruji and By me
 
 let submit = document.querySelector('#submit');
 
@@ -9,50 +9,44 @@ let userFun = ()=>{
     if(username.children[1].value === '' || username.children[1].value.length <= 3){
         username.classList.add('error')
         username.children[4].innerHTML = 'Please Enter Your Full Name';
-        username.classList.remove('success')
        
     }else{
         username.classList.add('success')
-        username.classList.remove('error')
     }
 }
 
-// password
-let passwordFun = ()=>{
-    let password = document.querySelector('#password');
-
-    if(password.children[1].value === '' || password.children[1].value.length <= 5){
-        password.classList.add('error');
-        password.children[4].innerHTML = 'Password Must Be Above 5 Characters';
-        password.classList.remove('success')
-    }else{
-        password.classList.add('success')
-        password.classList.remove('error')
-    }
-
-}
-
-// confirm
-let confirmFun = (len = 3)=>{
+// Password 
+let passFun = ()=>{
+    let password =document.querySelector('#password');
     let confirm = document.querySelector('#confirm');
 
-    if(confirm.children[1].value === '' || confirm.children[1].value.length >= len ){
+
+    if(password.children[1].value === '' && confirm.children[1].value === ''){
+        password.classList.add('error');
+        password.children[4].innerHTML = 'Please Enter Your Password';
         confirm.classList.add('error');
-        confirm.children[4].innerHTML = 'Please Enter Same Password';
-        confirm.classList.remove('success')
-    }else if(password!=confirm){
-        return false
+        confirm.children[4].innerHTML = 'Please First Enter Your Password';
 
-    }else{
-        confirm.classList.add('success')
-        confirm.classList.remove('error')
+    }else if(password.children[1].value.length <= 5){
+        password.classList.add('error');
+        password.children[4].innerHTML = 'Password Must Be Above 5 Characters';
+
+    }else if (password.children[1].value.length !== confirm.children[1].value.length){
+        confirm.classList.add('error')
+        confirm.children[4].innerHTML = 'Please Enter Same Password'
+        password.classList.add('success')
     }
-
+    else{
+        password.classList.add('success')
+        confirm.classList.add('success')
+    }
+    
+    
 }
+
 
 
 submit.addEventListener('click', ()=>{
     userFun()
-    passwordFun()
-    confirmFun()
+    passFun()
 });
