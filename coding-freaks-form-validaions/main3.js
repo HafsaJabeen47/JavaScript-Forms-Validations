@@ -1,4 +1,5 @@
 // Form Validation By Programming Guruji and By me
+// this approach which i used is not good to go because in future when i add new elements in HTML then automatically children[0] will changed at their places so we need to get element by ID directly.
 
 let submit = document.querySelector('#submit');
 
@@ -40,7 +41,6 @@ let passFun = ()=>{
         password.classList.add('success')
         confirm.classList.add('success')
     }
-    
     
 }
 
