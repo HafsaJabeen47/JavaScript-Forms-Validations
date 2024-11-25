@@ -24,3 +24,5 @@ function validateName(){
     }
     return true;
 };
+
+// we can use required keyword in form HTML input
